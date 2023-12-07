@@ -22,7 +22,7 @@ def main():
     )
 
     # Declaring list.
-    num_user = []
+    number_user = []
 
     # Getting user input for decimal and number of decimal places.
     dec_num_as_string = input("Enter a decimal number: ")
@@ -36,31 +36,26 @@ def main():
         dec_places_as_int = int(dec_place_as_string)
 
         # Adding the user's input to the list.
-        num_user.append(dec_num_as_float)
+        number_user.append(dec_num_as_float)
 
         # Using an if statement to check if the number entered for decimal places is
         # negative.
         if dec_places_as_int < 0 or dec_num_as_float < 0:
             print(
-                "This is a negative integer. Please use positive integers only.".format(
-                    dec_places_as_int
+                "This is a negative integer. Please use positive integers only."
                 )
-            )
+
         # Else the integer of decimal places is greater than 0.
         else:
             # Calling function to round the number.
-            round_decimal(num_user, dec_places_as_int)
+            round_decimal(number_user, dec_places_as_int)
 
             # Printing the rounded number.
-            print(
-                "Your number {}, rounded to {} decimal places is {}.".format(
-                    dec_num_as_float, dec_places_as_int, num_user[0]
-                )
-            )
+            print("Your rounded number is {}".format(number_user[0]))
 
         # Catching any errors.
     except:
-        print("Invalid input.")
+        print("Invalid input. Please try again.")
 
 
 if __name__ == "__main__":
